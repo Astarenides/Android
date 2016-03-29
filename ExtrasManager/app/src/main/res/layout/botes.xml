@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFCCBC">
+
+    <RelativeLayout
+        android:id="@+id/barraTituloBotes"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#FF5722">
+
+        <ImageButton
+            android:id="@+id/btnMenuBotes"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icono_menu_blanco"
+            android:background="@null"
+            android:layout_marginLeft="16dp"/>
+
+        <TextView
+            android:id="@+id/tituloBarraBotes"
+            android:layout_toRightOf="@id/btnMenuBotes"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="16dp"
+            android:capitalize="characters"
+            android:text="Botes"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="80dp">
+
+    </ListView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/toolbarInferior"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFAB91">
+
+    </LinearLayout>
+
+    <ImageButton
+        android:src="@drawable/icono_mas"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="65dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/circle_red"
+        android:id="@+id/imageButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

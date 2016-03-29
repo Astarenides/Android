@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF" >
+
+    <RelativeLayout
+        android:id="@+id/barraTituloOpciones"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#4CAF50">
+
+        <ImageButton
+            android:id="@+id/btnMenuOpciones"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icono_menu_blanco"
+            android:background="@null"
+            android:layout_marginLeft="16dp"/>
+
+        <TextView
+            android:id="@+id/tituloBarraOpciones"
+            android:layout_toRightOf="@id/btnMenuOpciones"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="16dp"
+            android:capitalize="characters"
+            android:text="Opciones"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/opcionesBD"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:text="Base de Datos"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#66BB6A"
+                android:layout_marginBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:layout_below="@id/opcionesBD"
+                android:id="@+id/opcionesResetBD"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:textSize="18dp"
+                android:text="Reiniciar Base de Datos"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:background="@drawable/mybutton"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:layout_below="@id/opcionesResetBD"
+                android:id="@+id/opcionesHoras"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:text="Horas Extra"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#66BB6A"
+                android:layout_marginBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:layout_below="@id/opcionesHoras"
+                android:id="@+id/opcionesResetHoras"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:textSize="18dp"
+                android:text="Limpiar Horas Extra"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:background="@drawable/mybutton"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:layout_below="@id/opcionesResetHoras"
+                android:id="@+id/opcionesExportarHoras"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:textSize="18dp"
+                android:text="Exportar Horas a Archivo"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:background="@drawable/mybutton"
+                android:gravity="center_vertical"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

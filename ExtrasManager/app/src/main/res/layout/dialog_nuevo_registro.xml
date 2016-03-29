@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="24dp"
+        android:background="#2196F3">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Añadir Horas"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/dateExtras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar Fecha"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"/>
+
+        <EditText
+            android:layout_below="@id/dateExtras"
+            android:id="@+id/txtHorasExtraMas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="24dp"
+            android:hint="Número de horas">
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:layout_below="@id/txtHorasExtraMas"
+            android:id="@+id/txtHorasExtraNotas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginBottom="24dp"
+            android:hint="Notas">
+
+        </EditText>
+
+        <RadioGroup
+            android:id="@+id/rgMasMenos"
+            android:layout_below="@id/txtHorasExtraNotas"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <RadioButton
+                android:id="@+id/rbMas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="MAS"
+                android:layout_marginRight="24dp"/>
+
+            <RadioButton
+                android:id="@+id/rbMenos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="MENOS" />
+
+        </RadioGroup>
+
+        <com.gc.materialdesign.views.ButtonFlat
+            android:id="@+id/btnAceptarDialogMas"
+            android:layout_width="128dp"
+            android:layout_height="36dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="GUARDAR"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+
+        <com.gc.materialdesign.views.ButtonFlat
+            android:id="@+id/btnCancelarDialogMas"
+            android:layout_width="128dp"
+            android:layout_height="36dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_marginRight="8dp"
+            android:text="CANCELAR"
+            android:layout_toLeftOf="@id/btnAceptarDialog"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

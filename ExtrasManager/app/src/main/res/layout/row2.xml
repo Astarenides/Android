@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.micasa.extrasmanager.CheckedLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_filas">
+
+    <TextView
+        android:id="@+id/tituloFila"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="#FF424242"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/descripcionFila"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="#FF757575"
+        android:layout_below="@id/tituloFila"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/txtNotas"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="#FF757575"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"/>
+
+
+</org.micasa.extrasmanager.CheckedLinearLayout>

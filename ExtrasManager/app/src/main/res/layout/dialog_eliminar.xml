@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="120dp"
+    android:background="#FFFFFF"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿Está Seguro?"
+        android:textSize="18sp"
+        android:textColor="#616161"
+        android:layout_marginBottom="24dp"/>
+
+    <com.gc.materialdesign.views.ButtonFlat
+        android:id="@+id/btnAceptarDialog"
+        android:layout_width="84dp"
+        android:layout_height="36dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="BORRAR"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+
+    <com.gc.materialdesign.views.ButtonFlat
+        android:id="@+id/btnCancelarDialog"
+        android:layout_width="128dp"
+        android:layout_height="36dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_marginRight="8dp"
+        android:text="CANCELAR"
+        android:layout_toLeftOf="@id/btnAceptarDialog"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

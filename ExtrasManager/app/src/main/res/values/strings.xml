@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Extras Manager</string>
+    <string name="drawer_open">Menu</string>
+    <string name="hello_world">Cerrar</string>
+    <string name="action_settings">Settings</string>
+    <!--  Lista de titulos de navegacion -->
+    <string-array name="nav_options">
+        <item >Horas Extra</item>
+        <item >Reparto Botes</item>
+    </string-array>
+    <!-- Lista de iconos de navegacion -->
+    <array name="navigation_iconos">
+        <item>@drawable/icono_reloj_blanco</item>
+        <item>@drawable/icono_dinero_blanco</item>
+    </array>
+</resources>

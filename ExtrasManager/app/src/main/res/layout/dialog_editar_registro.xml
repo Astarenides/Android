@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="320dp"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="24dp"
+        android:background="#2196F3">
+
+        <TextView
+            android:id="@+id/txtTituloEditar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Editar Horas"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:padding="24dp">
+
+        <EditText
+            android:id="@+id/txtHorasExtraEditar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="24dp"
+            android:hint="Número de horas">
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:layout_below="@id/txtHorasExtraEditar"
+            android:id="@+id/txtHorasExtraNotasEditar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginBottom="24dp"
+            android:hint="Notas">
+
+        </EditText>
+
+        <RadioGroup
+            android:id="@+id/rgMasMenosEditar"
+            android:layout_below="@id/txtHorasExtraNotasEditar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <RadioButton
+                android:id="@+id/rbMasEditar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="MAS"
+                android:layout_marginRight="24dp"/>
+
+            <RadioButton
+                android:id="@+id/rbMenosEditar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="MENOS" />
+
+        </RadioGroup>
+
+        <com.gc.materialdesign.views.ButtonFlat
+            android:id="@+id/btnAceptarDialogEditar"
+            android:layout_width="128dp"
+            android:layout_height="36dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="GUARDAR"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+
+        <com.gc.materialdesign.views.ButtonFlat
+            android:id="@+id/btnCancelarDialogEditar"
+            android:layout_width="128dp"
+            android:layout_height="36dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_marginRight="8dp"
+            android:text="CANCELAR"
+            android:layout_toLeftOf="@id/btnAceptarDialogEditar"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
