@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    android:id="@+id/scrollAsignarClases"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/fondo_pergamino"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" >
+	
+	    <LinearLayout
+	        android:id="@+id/layOutArriba"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="10dp"
+	        android:orientation="vertical" >
+	        
+	        <TextView 
+	            android:id="@+id/labelSeleccionaPersonaje"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center"
+	            android:text="Selecciona Personaje"/>
+	        
+	        <Spinner 
+	            android:id="@+id/desplegablePersonajes"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"/>
+	        
+	        <LinearLayout 
+	            android:id="@+id/layoutBotones"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal">
+	                
+                <Button
+		            android:id="@+id/btnCrearCosa"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="0.5"
+		            android:text="Añadir Clase" />
+		        
+		        <Button
+		            android:id="@+id/btnGuardar"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="0.5"
+		            android:text="Guardar" />
+	            
+	        </LinearLayout>"
+	
+	    </LinearLayout>
+	
+	    <LinearLayout
+	        android:id="@+id/layoutCosas"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="10dp"
+	        android:padding="10dp"
+	        android:orientation="vertical" >
+	
+	    </LinearLayout>
+	
+	</LinearLayout>
+</ScrollView><!-- From: file:/C:/Users/Astarenides/Desktop/Android/Tiradas/app/src/main/res/layout-sw720dp/asignarclases.xml -->

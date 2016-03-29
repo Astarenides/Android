@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <TextView
+        android:id="@+id/textoNombrePersonaje"
+        android:layout_height="fill_parent"
+        android:layout_width="0dp"
+        android:gravity="center_vertical"
+        android:layout_weight="3.4"/>
+    <TextView 
+        android:id="@+id/textoACPersonaje"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1.1"/>
+    <TextView 
+        android:id="@+id/textoMeleePersonaje"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1.1"/>
+    <TextView 
+        android:id="@+id/textoRangedPersonaje"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1.1"/>
+    <TextView 
+        android:id="@+id/textoSaveFort"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1.1"/>
+    <TextView 
+        android:id="@+id/textoSaveRef"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1.1"/>
+    <TextView 
+        android:id="@+id/textoSaveWill"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1.1"/>
+
+</TableRow>
+<!-- From: file:/C:/Users/Astarenides/Desktop/Android/Tiradas/app/src/main/res/layout/filageneral.xml -->

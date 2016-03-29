@@ -1,0 +1,30 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <string name="app_name">Pathfinder Character Manager</string>
+    <string name="drawer_open">Menu</string>
+    <string name="hello_world">Cerrar</string>
+    <string name="acercade">
+        Pathfinder Character Manager:
+        Permite crear personajes del juego de Rol Pathfinder(R),
+        así como asignarles niveles de personaje de las clases
+        deseadas, equipo y efectos.
+        Muestra datos detallados sobre las estadísticas de
+        defensa y ataque de cada personaje ya sea por separado
+        como en global por medio de tabla.
+    </string>
+    <!--  Lista de titulos de navegacion -->
+    <string-array name="nav_options">
+        <item >Inicio</item>
+        <item >Estadisticas</item>
+        <item >Personajes</item>
+        <item >Efectos</item>
+    </string-array>
+    <!-- Lista de iconos de navegacion -->
+    <array name="navigation_iconos">
+        <item>@drawable/ic_action_event</item>
+        <item>@drawable/ic_action_search</item>
+        <item>@drawable/ic_action_group</item>
+        <item>@drawable/ic_action_cloud</item>
+    </array>
+
+</resources>

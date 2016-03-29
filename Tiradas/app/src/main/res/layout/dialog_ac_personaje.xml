@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:orientation="vertical"
+    android:background="@drawable/fondo_pergamino" >
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="0.05"
+        android:gravity="center_vertical"
+        android:text="ARMADURA"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+	
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="0.8"
+	    android:weightSum="3"
+	    android:orientation="horizontal">
+	    
+	    <ImageView
+	       	android:layout_width="0dp"
+	           android:layout_height="fill_parent"
+	           android:layout_weight="1"
+	           android:scaleType="fitCenter"
+	           android:src="@drawable/icono_equipo_escudo" />
+	    
+	    <LinearLayout
+	        android:layout_width="0dp"
+	        android:layout_height="fill_parent"
+	        android:layout_weight="2"
+	        android:weightSum="4"
+	        android:paddingTop="10dp"
+	        android:paddingLeft="10dp"
+	        android:orientation="vertical">
+	        
+	        <LinearLayout 
+	            android:layout_width="fill_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:paddingRight="10dp"
+	            android:orientation="horizontal">
+	            
+	            <TextView 
+	             android:text="NORMAL:"
+	             android:textColor="#000000"
+	             android:layout_width="0dp"
+	             android:layout_height="fill_parent"
+	             android:layout_weight="0.7"
+	             android:gravity="center_vertical" />
+	         
+	         <TextView 
+	             android:id="@+id/txtArmaduraPersonajeAC"
+	             android:textStyle="bold"
+	             android:textColor="#000000"
+	             android:layout_width="0dp"
+	             android:layout_height="fill_parent"
+	             android:layout_weight="0.3"
+	             android:gravity="center_vertical|right"/>
+	            
+	        </LinearLayout>
+	        
+	        <LinearLayout 
+	            android:layout_width="fill_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:paddingRight="10dp"
+	            android:orientation="horizontal">
+	            
+	            <TextView 
+	             android:text="TOQUE:"
+	             android:textColor="#000000"
+	             android:layout_width="0dp"
+	             android:layout_height="fill_parent"
+	             android:layout_weight="0.7"
+	             android:gravity="center_vertical"/>
+	         
+	         <TextView 
+	             android:id="@+id/txtArmaduraToquePersonajeAC"
+	             android:textStyle="bold"
+	             android:textColor="#000000"
+	             android:layout_width="0dp"
+	             android:layout_height="fill_parent"
+	             android:layout_weight="0.3"
+	             android:gravity="center_vertical|right"/>
+	            
+	        </LinearLayout>
+	        
+	        <LinearLayout 
+	            android:layout_width="fill_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:paddingRight="10dp"
+	            android:orientation="horizontal">
+	            
+	            <TextView 
+	             android:text="DESPREVENIDO:"
+	             android:textColor="#000000"
+	             android:layout_width="0dp"
+	             android:layout_height="fill_parent"
+	             android:layout_weight="0.7"
+	             android:gravity="center_vertical"/>
+	         
+	         <TextView 
+	             android:id="@+id/txtArmaduraDesprevenidoPersonajeAC"
+	             android:textStyle="bold"
+	             android:textColor="#000000"
+	             android:layout_width="0dp"
+	             android:layout_height="fill_parent"
+	             android:layout_weight="0.3"
+	             android:gravity="center_vertical|right"/>
+	            
+	        </LinearLayout>
+	        
+	        <LinearLayout 
+	            android:layout_width="fill_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:paddingRight="10dp"
+	            android:orientation="horizontal">
+	            
+	            <TextView 
+	             android:text="SIN ESCUDO:"
+	             android:textColor="#000000"
+	             android:layout_width="0dp"
+	             android:layout_height="fill_parent"
+	             android:layout_weight="0.7"
+	             android:gravity="center_vertical"/>
+	         
+	         <TextView 
+	             android:id="@+id/txtArmaduraSinEscudoPersonajeAC"
+	             android:textStyle="bold"
+	             android:textColor="#000000"
+	             android:layout_width="0dp"
+	             android:layout_height="fill_parent"
+	             android:layout_weight="0.3"
+	             android:gravity="center_vertical|right"/>
+	            
+	        </LinearLayout>
+	        
+	    </LinearLayout>
+	    
+	</LinearLayout>
+    
+    <Button 
+		android:id="@+id/btnAceptarPersonajeAC"
+		android:layout_width="fill_parent"
+		android:layout_height="0dp"
+		android:layout_weight="0.15" 
+		android:text="ACEPTAR" />
+
+</LinearLayout>

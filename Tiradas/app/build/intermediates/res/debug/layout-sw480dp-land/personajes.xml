@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:baselineAligned="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondopersonajes_land"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.05"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:text="DESLIZA PARA MENU >>>"
+        android:textSize="13sp" />
+    
+    <LinearLayout 
+        android:baselineAligned="false"
+		android:layout_width="fill_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="0.95"
+	    android:orientation="horizontal" >
+    
+	    <LinearLayout
+	        android:layout_width="0dp"
+	        android:layout_height="fill_parent"
+	        android:layout_weight="0.3"
+	        android:padding="10dp"
+	        android:orientation="vertical" >
+	
+	        <ImageView
+	            android:id="@+id/imgLogo"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:scaleType="fitCenter"
+	            android:src="@drawable/iconopath" />
+	    </LinearLayout>
+	
+	    <LinearLayout
+	        android:layout_width="0dp"
+	        android:layout_height="fill_parent"
+	        android:layout_weight="0.6"
+	        android:orientation="vertical"
+	        android:padding="10dp" >
+	
+	        <Button
+				android:id="@+id/btnCrearPersonaje"
+				android:layout_width="fill_parent"
+				android:layout_height="0dp"
+				android:layout_gravity="center"
+				android:textStyle="bold"
+				android:textColor="#FFFFFF"
+				android:layout_weight="0.2"
+				android:text="CREAR PERSONAJES" />
+	            
+	        <Button
+			    android:id="@+id/btnEditarPersonaje"
+			    android:layout_width="fill_parent"
+			    android:layout_height="0dp"
+			    android:layout_gravity="center"
+			    android:textStyle="bold"
+				android:textColor="#FFFFFF"
+			    android:layout_weight="0.2"
+			    android:text="EDITAR PERSONAJES" />
+	        
+			<Button
+			    android:id="@+id/btnClases"
+			    android:layout_width="fill_parent"
+			    android:layout_height="0dp"
+			    android:layout_gravity="center"
+			    android:textStyle="bold"
+				android:textColor="#FFFFFF"
+			    android:layout_weight="0.2"
+			    android:text="ASIGNAR CLASES" />
+			
+			<Button
+			    android:id="@+id/btnEquiparPersonaje"
+			    android:layout_width="fill_parent"
+			    android:layout_height="0dp"
+			    android:layout_gravity="center"
+			    android:textStyle="bold"
+				android:textColor="#FFFFFF"
+			    android:layout_weight="0.2"
+			    android:text="EQUIPAR PERSONAJES" />
+			
+			<Button
+			    android:id="@+id/btnAsignarEfectosPersonajes"
+			    android:layout_width="fill_parent"
+			    android:layout_height="0dp"
+			    android:layout_gravity="center"
+			    android:textStyle="bold"
+				android:textColor="#FFFFFF"
+			    android:layout_weight="0.2"
+			    android:text="ASIGNAR EFECTOS" />
+	        
+	    </LinearLayout>
+    
+    </LinearLayout>
+
+</LinearLayout>
+<!-- From: file:/C:/Users/Astarenides/Desktop/Android/Tiradas/app/src/main/res/layout-sw480dp-land/personajes.xml -->

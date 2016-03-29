@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/redondeado"
+    android:padding="10dp"
+    android:layout_marginTop="10dp" >
+    
+    <TextView
+        android:id="@+id/labelClase"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical"
+        android:text="Clase: " />
+    
+    <Spinner
+        android:id="@+id/desplegableClase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/labelClase"
+        />
+   
+    <TextView 
+        android:id="@+id/labelNivel"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/labelClase"
+        android:layout_alignLeft="@+id/labelClase"
+        android:gravity="center_vertical"
+        android:text="Nivel: " />
+    
+    <EditText 
+        android:id="@+id/txtNivel"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/desplegableClase"
+		android:layout_alignLeft="@+id/desplegableClase"
+		android:inputType="number"
+        />
+    
+    <ImageButton 
+        android:id="@+id/btnQuitarLinea"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/iconoxgrande" />"
+
+</RelativeLayout>
+<!-- From: file:/C:/Users/Astarenides/Desktop/Android/Tiradas/app/src/main/res/layout/layout_cosas_personajes.xml -->

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_pergamino"
+    android:orientation="horizontal" >
+    
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.3"
+        android:padding="10dp"
+        android:weightSum="10"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8.5"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logopersonajes" />
+        
+        <Button
+	        android:id="@+id/btnGuardarEquiparPersonaje"
+		    android:layout_width="fill_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="1.5"
+		    android:textSize="12sp"
+		    android:text="GUARDAR">
+    </Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.7"
+        android:weightSum="10"
+        android:orientation="vertical" >
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:layout_weight="2">
+            
+            <TextView
+	        	android:id="@+id/labelNombre"
+	            android:layout_width="0dp"
+	            android:layout_height="fill_parent"
+	            android:layout_weight="0.4"
+	            android:layout_gravity="center_vertical|center"
+	            android:gravity="center_vertical|center"
+	            android:textSize="15sp"
+	            android:text="SELECCIONAR:" />
+	            
+			<Spinner 
+	        	android:id="@+id/sipnnerNombreEquiparPersonaje"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.6"/>
+			
+        </LinearLayout>
+		
+        <TableLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="8"
+	        android:weightSum="3"
+	        android:layout_margin="10dp">
+        
+	        <TableRow 
+	            android:layout_width="fill_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:weightSum="3">
+
+	            <ImageView
+	                android:layout_width="0dp"
+	                android:layout_height="fill_parent"
+	                android:layout_weight="0.5"
+	                android:scaleType="fitCenter"
+	                android:layout_gravity="center"
+	                android:padding="10dp"
+	                android:src="@drawable/icono_equipo_armadura" />
+	            
+	            <LinearLayout 
+	                android:layout_width="0dp"
+	                android:layout_height="fill_parent"
+	                android:layout_weight="2.5"
+	                android:orientation="vertical">
+	                
+	                <LinearLayout
+	                    android:layout_width="fill_parent"
+				        android:layout_height="0dp"
+				        android:layout_weight="0.5"
+				        android:orientation="horizontal">
+				        
+	                    <TextView
+		                    android:layout_width="0dp"
+	                        android:layout_height="fill_parent"
+	                        android:gravity="center_vertical"
+	                        android:layout_weight="0.4"
+	                        android:textSize="15sp"
+		                    android:textStyle="bold"
+		                    android:text="ARMADURA"/>
+	
+		                <Spinner
+		                    android:id="@+id/spinnerEquiparArmadura"
+		                    android:layout_width="0dp"
+					        android:layout_height="fill_parent"
+					        android:layout_weight="0.6"
+					        android:layout_gravity="center_vertical"
+					        android:gravity="center_vertical" />
+				        
+	                </LinearLayout>
+	
+	                <LinearLayout
+	                    android:layout_width="fill_parent"
+				        android:layout_height="0dp"
+				        android:layout_weight="0.5"
+				        android:orientation="horizontal">
+	                    
+	                    <TextView 
+	                        android:layout_width="0dp"
+	                        android:layout_height="fill_parent"
+	                        android:gravity="center_vertical|right"
+	                        android:paddingRight="10dp"
+	                        android:layout_weight="0.4"
+	                        android:textSize="15sp"
+	                        android:textStyle="bold"
+	                        android:text="BONIFICADOR"/>
+	                    
+	                    <Spinner
+					    	android:id="@+id/spinnerBonos"
+					        android:layout_width="0dp"
+					        android:layout_height="fill_parent"
+					        android:layout_weight="0.6"
+					        android:layout_gravity="center_vertical"
+					        android:gravity="center_vertical"/>
+	                    
+	                </LinearLayout>
+	
+	            </LinearLayout>
+
+	        </TableRow>
+	        
+	        <TableRow
+	            android:layout_width="fill_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="1.3">
+	            
+	            <ImageView
+	                android:layout_width="0dp"
+	                android:layout_height="fill_parent"
+	                android:layout_weight="0.5"
+	                android:scaleType="fitCenter"
+	                android:layout_gravity="center"
+	                android:padding="10dp"
+	                android:src="@drawable/icono_equipo_arma" />
+	            
+	            <LinearLayout 
+	                android:layout_width="0dp"
+	                android:layout_height="fill_parent"
+	                android:layout_weight="2.5"
+	                android:orientation="vertical">
+	                
+	                <LinearLayout
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="0dp"
+		                android:layout_weight="0.8"
+		                android:weightSum="3"
+		                android:gravity="center_vertical"
+	                    android:orientation="horizontal">
+	                
+		                <TextView 
+		                    android:layout_width="0dp"
+		                    android:layout_height="fill_parent"
+		                    android:layout_weight="1"
+		                    android:textSize="15sp"
+		                    android:gravity="center_vertical"
+		                    android:layout_gravity="center_vertical"
+		                    android:textStyle="bold"
+		                    android:text="ARMA"/>
+		                
+		                <Spinner 
+		                    android:id="@+id/spinnerEquiparArma"
+		                    android:layout_width="0dp"
+		                    android:layout_height="fill_parent"
+		                    android:layout_gravity="center_vertical"
+		                    android:layout_weight="2"/>
+	                
+	                </LinearLayout>
+	                
+	                <TextView
+				    	android:id="@+id/labelRelleno1"
+				        android:layout_width="fill_parent"
+				        android:layout_height="0dp"
+				        android:layout_weight="0.2"
+				        android:layout_gravity="center_vertical"
+				        android:text="  " />
+	                
+	            </LinearLayout>
+	            
+	        </TableRow>
+	        
+	        <TableRow 
+	            android:layout_width="fill_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="0.7">
+	            
+	            <ImageView 
+	                android:layout_width="0dp"
+	                android:layout_height="fill_parent"
+	                android:layout_weight="0.5"
+	                android:scaleType="fitCenter"
+	                android:layout_gravity="center"
+	                android:padding="10dp"
+	                android:src="@drawable/icono_equipo_escudo"/>
+	            
+	            <LinearLayout 
+	                android:layout_width="0dp"
+	                android:layout_height="fill_parent"
+	                android:layout_weight="2.5"
+	                android:orientation="vertical">
+	                
+	                <LinearLayout
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="0dp"
+		                android:layout_weight="0.3"
+		                android:gravity="center_vertical"
+	                    android:orientation="horizontal">
+	                    
+	                    <TextView 
+		                    android:layout_width="0dp"
+	                    	android:layout_height="fill_parent"
+		                    android:layout_weight="0.4"
+		                    android:textSize="15sp"
+		                    android:gravity="center_vertical"
+		                    android:textStyle="bold"
+		                    android:text="OFFHAND"/>
+			                
+		                <Spinner 
+		                    android:id="@+id/spinnerEquiparOffhand"
+		                    android:layout_width="0dp"
+		                    android:layout_height="fill_parent"
+		                    android:gravity="center_vertical"
+		                    android:layout_weight="0.6"/>
+		                
+	                </LinearLayout>
+	                
+	                <LinearLayout
+	                    android:layout_width="fill_parent"
+				        android:layout_height="0dp"
+				        android:layout_weight="0.3"
+				        android:orientation="horizontal">
+	                    
+	                    <TextView 
+	                        android:layout_width="0dp"
+	                        android:layout_height="fill_parent"
+	                        android:gravity="center_vertical|right"
+	                        android:paddingRight="10dp"
+	                        android:layout_weight="0.4"
+	                        android:textSize="15sp"
+	                        android:textStyle="bold"
+	                        android:text="BONIFICADOR"/>
+	                    
+	                    <Spinner
+					    	android:id="@+id/spinnerBonosEscudo"
+					        android:layout_width="0dp"
+					        android:layout_height="fill_parent"
+					        android:layout_weight="0.6"
+					        android:layout_gravity="center_vertical"
+					        android:gravity="center_vertical"/>
+	                    
+	                </LinearLayout>
+	                
+	                <RadioGroup 
+	                    android:id="@+id/rgOff"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="0dp"
+	                    android:layout_weight="0.3"
+	                    android:gravity="center|center_vertical"
+	                    android:orientation="horizontal">
+	                    
+	                    <RadioButton 
+	                        android:id="@+id/radioOffNinguno"
+	                        android:text="NINGUNO"/>
+	                    <RadioButton 
+	                        android:id="@+id/radioOffArma"
+	                        android:text="ARMA"/>
+	                    <RadioButton 
+	                        android:id="@+id/radioOffEscudo"
+	                        android:text="ESCUDO"/>
+	                    
+	                </RadioGroup>
+	                
+	            </LinearLayout>
+	            
+	        </TableRow>
+	        
+	    </TableLayout>
+        
+        
+        
+    </LinearLayout>
+    
+</LinearLayout>
+<!-- From: file:/C:/Users/Astarenides/Desktop/Android/Tiradas/app/src/main/res/layout-land/equiparpersonaje.xml -->

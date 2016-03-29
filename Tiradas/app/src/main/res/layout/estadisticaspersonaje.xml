@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondo_pergamino" >
+    
+	<ImageView
+		android:id="@+id/logoEstadisticasPersonaje"
+		android:layout_marginTop="10dp"
+		android:layout_marginBottom="10dp"
+		android:layout_width="fill_parent"
+		android:layout_height="0dp"
+		android:layout_weight="0.1"
+		android:src="@drawable/logoestadisticaspersonaje" />
+	
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="0.9"
+	    android:orientation="vertical">
+	    
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="0.1"
+	        android:orientation="horizontal"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp">
+	        
+	        <TextView 
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.4"
+	            android:layout_gravity="center_vertical"
+	            android:text="SELECCIONAR:"/>
+	        
+	        <Spinner 
+	            android:id="@+id/spinnerPersonajesEstadisticas"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.6"/>
+	    </LinearLayout>
+	    
+	    <TabHost 
+	        android:id="@android:id/tabhost"
+		    android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="0.9">
+		 
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" >
+		 
+				<TabWidget 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:id="@android:id/tabs" />
+		 
+		        <FrameLayout 
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:id="@android:id/tabcontent" >
+		 			
+		            <ScrollView 
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+						android:scrollbars="vertical|horizontal">
+		            	
+		            	<LinearLayout 
+			                android:id="@+id/tabStats"
+				            android:orientation="vertical"
+				            android:layout_width="match_parent"
+				            android:layout_height="wrap_content" >
+			                
+			                <TextView 
+			                    android:text="CARACTERÍSTICAS"
+			                    android:layout_width="fill_parent"
+			                    android:layout_marginTop="10dp"
+				                android:layout_height="wrap_content"
+				                android:textStyle="bold"
+				                android:gravity="center_vertical|center" />
+			                
+			                <TableLayout 
+						        android:id="@+id/cabeceraStats"
+						        android:layout_width="wrap_content"
+						        android:layout_height="wrap_content"
+						        android:layout_gravity="center">
+						    </TableLayout>
+							
+						    <ScrollView
+						        android:id="@+id/scrollTablaStats"
+						        android:layout_width="fill_parent"
+						        android:layout_height="fill_parent"
+						        android:scrollbars="vertical|horizontal" >
+						        
+						        <LinearLayout 
+						            android:orientation="vertical"
+						            android:layout_width="wrap_content" 
+						            android:layout_height="wrap_content"
+						            android:layout_gravity="center_horizontal" >
+						            
+						            <TableLayout 
+								        android:id="@+id/tablaStats"
+								        android:layout_width="wrap_content" 
+								        android:layout_height="wrap_content" >
+								        
+								    </TableLayout>
+						            
+						        </LinearLayout>
+						        
+						    </ScrollView>
+			                
+			                
+			            </LinearLayout>
+			            
+		            </ScrollView>
+		            
+					<LinearLayout 
+					    android:id="@+id/tabDefensas"
+			            android:orientation="vertical"
+			            android:layout_width="match_parent"
+			            android:layout_height="match_parent" >
+			            
+					    <TextView 
+			                android:text="ARMADURA"
+			                android:layout_width="fill_parent"
+			                android:layout_height="0dp"
+			                android:layout_weight="0.1"
+			                android:textStyle="bold"
+			                android:gravity="center_vertical|center" />
+					    
+					    <LinearLayout 
+					        android:layout_width="fill_parent"
+					        android:layout_height="0dp"
+					        android:layout_weight="0.4"
+					        android:weightSum="3"
+					        android:orientation="horizontal">
+					        
+					        <ImageView
+				            	android:layout_width="0dp"
+				                android:layout_height="fill_parent"
+				                android:layout_weight="1"
+				                android:scaleType="fitCenter"
+				                android:src="@drawable/icono_equipo_escudo" />
+					        
+					        <LinearLayout
+					            android:layout_width="0dp"
+					            android:layout_height="fill_parent"
+					            android:layout_weight="2"
+					            android:weightSum="4"
+					            android:paddingTop="10dp"
+					            android:paddingLeft="10dp"
+					            android:orientation="vertical">
+					            
+					            <LinearLayout 
+					                android:id="@+id/total"
+					                android:layout_width="fill_parent"
+					                android:layout_height="0dp"
+					                android:layout_weight="1"
+					                android:paddingRight="10dp"
+					                android:orientation="horizontal">
+					                
+					                <TextView 
+						                android:id="@+id/labelArmaduraTotalEstadisticas"
+						                android:text="NORMAL:"
+						                android:layout_width="0dp"
+						                android:layout_height="fill_parent"
+						                android:layout_weight="0.7"
+						                android:gravity="center_vertical" />
+						            
+						            <TextView 
+						                android:id="@+id/txtArmaduraTotalEstadisticas"
+						                android:textStyle="bold"
+						                android:layout_width="0dp"
+						                android:layout_height="fill_parent"
+						                android:layout_weight="0.3"
+						                android:gravity="center_vertical|right"/>
+					                
+					            </LinearLayout>
+					            
+					            <LinearLayout 
+					                android:id="@+id/toque"
+					                android:layout_width="fill_parent"
+					                android:layout_height="0dp"
+					                android:layout_weight="1"
+					                android:paddingRight="10dp"
+					                android:orientation="horizontal">
+					                
+					                <TextView 
+						                android:id="@+id/labelArmaduraToqueEstadisticas"
+						                android:text="TOQUE:"
+						                android:layout_width="0dp"
+						                android:layout_height="fill_parent"
+						                android:layout_weight="0.7"
+						                android:gravity="center_vertical"/>
+						            
+						            <TextView 
+						                android:id="@+id/txtArmaduraToqueEstadisticas"
+						                android:textStyle="bold"
+						                android:layout_width="0dp"
+						                android:layout_height="fill_parent"
+						                android:layout_weight="0.3"
+						                android:gravity="center_vertical|right"/>
+					                
+					            </LinearLayout>
+					            
+					            <LinearLayout 
+					                android:id="@+id/desprevenido"
+					                android:layout_width="fill_parent"
+					                android:layout_height="0dp"
+					                android:layout_weight="1"
+					                android:paddingRight="10dp"
+					                android:orientation="horizontal">
+					                
+					                <TextView 
+						                android:id="@+id/labelArmaduraDesprevenidoEstadisticas"
+						                android:text="DESPREVENIDO:"
+						                android:layout_width="0dp"
+						                android:layout_height="fill_parent"
+						                android:layout_weight="0.7"
+						                android:gravity="center_vertical"/>
+						            
+						            <TextView 
+						                android:id="@+id/txtArmaduraDesprevenidoEstadisticas"
+						                android:textStyle="bold"
+						                android:layout_width="0dp"
+						                android:layout_height="fill_parent"
+						                android:layout_weight="0.3"
+						                android:gravity="center_vertical|right"/>
+					                
+					            </LinearLayout>
+					            
+					            <LinearLayout 
+					                android:id="@+id/conjuros"
+					                android:layout_width="fill_parent"
+					                android:layout_height="0dp"
+					                android:layout_weight="1"
+					                android:paddingRight="10dp"
+					                android:orientation="horizontal">
+					                
+					                <TextView 
+						                android:id="@+id/labelArmaduraSinEscudoEstadisticas"
+						                android:text="SIN ESCUDO:"
+						                android:layout_width="0dp"
+						                android:layout_height="fill_parent"
+						                android:layout_weight="0.7"
+						                android:gravity="center_vertical"/>
+						            
+						            <TextView 
+						                android:id="@+id/txtArmaduraSinEscudoEstadisticas"
+						                android:textStyle="bold"
+						                android:layout_width="0dp"
+						                android:layout_height="fill_parent"
+						                android:layout_weight="0.3"
+						                android:gravity="center_vertical|right"/>
+					                
+					            </LinearLayout>
+					            
+					        </LinearLayout>
+					        
+					    </LinearLayout>
+					    
+					    <TextView 
+			                android:text="TIRADAS DE SALVACION:"
+			                android:layout_width="fill_parent"
+			                android:layout_height="0dp"
+			                android:layout_weight="0.1"
+			                android:textStyle="bold"
+			                android:gravity="center_vertical|center" />
+					    
+			            <LinearLayout 
+					        android:layout_width="fill_parent"
+					        android:layout_height="0dp"
+					        android:layout_weight="0.4"
+					        android:weightSum="3"
+					        android:orientation="horizontal">
+					        
+			                <LinearLayout
+					            android:layout_width="0dp"
+					            android:layout_height="fill_parent"
+					            android:layout_weight="2"
+					            android:weightSum="3"
+					            android:paddingTop="10dp"
+					            android:paddingLeft="10dp"
+					            android:orientation="vertical">
+					            
+					            <LinearLayout 
+					                android:id="@+id/fortaleza"
+					                android:layout_width="fill_parent"
+					                android:layout_height="0dp"
+					                android:layout_weight="1"
+					                android:paddingRight="10dp"
+					                android:orientation="horizontal">
+					                
+					                <TextView 
+						                android:text="FORTALEZA:"
+						                android:layout_width="0dp"
+						                android:layout_height="fill_parent"
+						                android:layout_weight="0.7"
+						                android:gravity="center_vertical"/>
+						            
+						            <TextView 
+						                android:id="@+id/txtFortalezaEstadisticasPersonaje"
+						                android:textStyle="bold"
+						                android:layout_width="0dp"
+						                android:layout_height="fill_parent"
+						                android:layout_weight="0.3"
+						                android:gravity="center_vertical"/>
+					                
+					            </LinearLayout>
+					            
+					            <LinearLayout 
+					                android:layout_width="fill_parent"
+					                android:layout_height="0dp"
+					                android:layout_weight="1"
+					                android:paddingRight="10dp"
+					                android:orientation="horizontal">
+					                
+					                <TextView 
+						                android:text="REFLEJOS:"
+						                android:layout_width="0dp"
+						                android:layout_height="fill_parent"
+						                android:layout_weight="0.7"
+						                android:gravity="center_vertical"/>
+						            
+						            <TextView 
+						                android:id="@+id/txtReflejosEstadisticasPersonaje"
+						                android:textStyle="bold"
+						                android:layout_width="0dp"
+						                android:layout_height="fill_parent"
+						                android:layout_weight="0.3"
+						                android:gravity="center_vertical"/>
+					                
+					            </LinearLayout>
+					            
+					            <LinearLayout 
+					                android:layout_width="fill_parent"
+					                android:layout_height="0dp"
+					                android:layout_weight="1"
+					                android:paddingRight="10dp"
+					                android:orientation="horizontal">
+					                
+					                <TextView 
+						                android:text="VOLUNTAD:"
+						                android:layout_width="0dp"
+						                android:layout_height="fill_parent"
+						                android:layout_weight="0.7"
+						                android:gravity="center_vertical"/>
+						            
+						            <TextView 
+						                android:id="@+id/txtVoluntadEstadisticasPersonaje"
+						                android:textStyle="bold"
+						                android:layout_width="0dp"
+						                android:layout_height="fill_parent"
+						                android:layout_weight="0.3"
+						                android:gravity="center_vertical"/>
+					                
+					            </LinearLayout>
+					            
+					        </LinearLayout>
+			                
+			                <ImageView
+				            	android:layout_width="0dp"
+				                android:layout_height="fill_parent"
+				                android:layout_weight="1"
+				                android:scaleType="fitCenter"
+				                android:src="@drawable/logojuramentos" />
+			                
+						</LinearLayout>
+			            
+			        </LinearLayout>
+					
+					<LinearLayout 
+					    android:id="@+id/tabAtaque"
+			            android:orientation="vertical"
+			            android:layout_width="match_parent"
+			            android:layout_height="match_parent" >
+			 
+			            <TextView 
+			                android:text="ATAQUE"
+			                android:layout_width="fill_parent"
+			                android:layout_height="0dp"
+			                android:layout_weight="0.1"
+			                android:textStyle="bold"
+			                android:gravity="center_vertical|center" />
+					    
+					    <LinearLayout 
+					        android:layout_width="fill_parent"
+					        android:layout_height="0dp"
+					        android:layout_weight="0.4"
+					        android:weightSum="3"
+					        android:orientation="horizontal">
+					        
+					        <ImageView
+				            	android:layout_width="0dp"
+				                android:layout_height="fill_parent"
+				                android:layout_weight="1"
+				                android:scaleType="fitCenter"
+				                android:src="@drawable/espadas_cruzadas" />
+					        
+					        <LinearLayout
+					            android:layout_width="0dp"
+					            android:layout_height="fill_parent"
+					            android:layout_weight="2"
+					            android:weightSum="4"
+					            android:paddingTop="10dp"
+					            android:paddingLeft="10dp"
+					            android:orientation="vertical">
+					            
+					            <LinearLayout 
+					                android:id="@+id/cc"
+					                android:layout_width="fill_parent"
+					                android:layout_height="0dp"
+					                android:layout_weight="1"
+					                android:paddingRight="10dp"
+					                android:orientation="horizontal">
+					                
+					                <TextView 
+						                android:id="@+id/labelAtaqueCCEstadisticas"
+						                android:text="CUERPO A CUERPO:"
+						                android:layout_width="0dp"
+						                android:layout_height="fill_parent"
+						                android:layout_weight="0.7"
+						                android:gravity="center_vertical" />
+						            
+						            <TextView 
+						                android:id="@+id/txtAtaqueCCEstadisticas"
+						                android:textStyle="bold"
+						                android:layout_width="0dp"
+						                android:layout_height="fill_parent"
+						                android:layout_weight="0.3"
+						                android:gravity="center_vertical|right"/>
+					                
+					            </LinearLayout>
+					            
+					            <LinearLayout 
+					                android:id="@+id/distancia"
+					                android:layout_width="fill_parent"
+					                android:layout_height="0dp"
+					                android:layout_weight="1"
+					                android:paddingRight="10dp"
+					                android:orientation="horizontal">
+					                
+					                <TextView 
+						                android:id="@+id/labelAtaqueDistanciaEstadisticas"
+						                android:text="A DISTANCIA:"
+						                android:layout_width="0dp"
+						                android:layout_height="fill_parent"
+						                android:layout_weight="0.7"
+						                android:gravity="center_vertical"/>
+						            
+						            <TextView 
+						                android:id="@+id/txtAtaqueDistanciaEstadisticas"
+						                android:textStyle="bold"
+						                android:layout_width="0dp"
+						                android:layout_height="fill_parent"
+						                android:layout_weight="0.3"
+						                android:gravity="center_vertical|right"/>
+					                
+					            </LinearLayout>
+					            
+					            <LinearLayout 
+					                android:id="@+id/BMC"
+					                android:layout_width="fill_parent"
+					                android:layout_height="0dp"
+					                android:layout_weight="1"
+					                android:paddingRight="10dp"
+					                android:orientation="horizontal">
+					                
+					                <TextView 
+						                android:id="@+id/labelBMCEstadisticas"
+						                android:text="B.M.C.:"
+						                android:layout_width="0dp"
+						                android:layout_height="fill_parent"
+						                android:layout_weight="0.7"
+						                android:gravity="center_vertical"/>
+						            
+						            <TextView 
+						                android:id="@+id/txtBMCEstadisticas"
+						                android:textStyle="bold"
+						                android:layout_width="0dp"
+						                android:layout_height="fill_parent"
+						                android:layout_weight="0.3"
+						                android:gravity="center_vertical|right"/>
+					                
+					            </LinearLayout>
+					            
+					            <LinearLayout 
+					                android:id="@+id/DMC"
+					                android:layout_width="fill_parent"
+					                android:layout_height="0dp"
+					                android:layout_weight="1"
+					                android:paddingRight="10dp"
+					                android:orientation="horizontal">
+					                
+					                <TextView 
+						                android:id="@+id/labelDMCEstadisticas"
+						                android:text="D.M.C.:"
+						                android:layout_width="0dp"
+						                android:layout_height="fill_parent"
+						                android:layout_weight="0.7"
+						                android:gravity="center_vertical"/>
+						            
+						            <TextView 
+						                android:id="@+id/txtDMCEstadisticas"
+						                android:textStyle="bold"
+						                android:layout_width="0dp"
+						                android:layout_height="fill_parent"
+						                android:layout_weight="0.3"
+						                android:gravity="center_vertical|right"/>
+					                
+					            </LinearLayout>
+					            
+					        </LinearLayout>
+					        
+					    </LinearLayout>
+					    
+					    <TextView 
+			                android:text="DAÑO CON ARMAS"
+			                android:layout_width="fill_parent"
+			                android:layout_height="0dp"
+			                android:layout_weight="0.1"
+			                android:textStyle="bold"
+			                android:gravity="center_vertical|center" />
+					    
+			            <LinearLayout 
+					        android:layout_width="fill_parent"
+					        android:layout_height="0dp"
+					        android:layout_weight="0.4"
+					        android:weightSum="3"
+					        android:orientation="vertical">
+					        
+			                <TableLayout 
+						        android:id="@+id/cabeceraEstadisticas"
+						        android:layout_width="wrap_content"
+						        android:layout_height="wrap_content"
+						        android:layout_gravity="center">
+						    </TableLayout>
+							
+						    <ScrollView
+						        android:id="@+id/scrollTablaEstadisticas"
+						        android:layout_width="fill_parent"
+						        android:layout_height="fill_parent"
+						        android:scrollbars="vertical|horizontal" >
+						        
+						        <LinearLayout 
+						            android:orientation="vertical"
+						            android:layout_width="wrap_content" 
+						            android:layout_height="wrap_content"
+						            android:layout_gravity="center_horizontal" >
+						            
+						            <TableLayout 
+								        android:id="@+id/tablaGeneralEstadisticas"
+								        android:layout_width="wrap_content" 
+								        android:layout_height="wrap_content" >
+								        
+								    </TableLayout>
+						            
+						        </LinearLayout>
+						        
+						    </ScrollView>
+			                
+						</LinearLayout>
+			            
+			        </LinearLayout>
+			        
+				</FrameLayout>
+				
+		    </LinearLayout>
+		    
+		</TabHost>
+	    
+	</LinearLayout>
+
+</LinearLayout>

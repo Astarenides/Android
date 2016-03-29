@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <issue id="InflateParams">
+        <ignore path="gen/com/utiles/tiradas/AdapterMenuItem.java" />
+    </issue>
+</lint>

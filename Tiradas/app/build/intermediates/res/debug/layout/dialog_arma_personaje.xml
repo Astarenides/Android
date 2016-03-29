@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="410dp"
+    android:orientation="vertical"
+    android:background="@drawable/fondo_pergamino">
+    
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.11"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:text="ARMA(S) EQUIPADA(S)"/>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.11"
+        android:orientation="horizontal">
+        
+        <TextView 
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.3"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:gravity="right|center_vertical"
+            android:text="ARMA: "/>
+        
+        <Spinner 
+            android:id="@+id/spinnerArmaPersonajeArma"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.7"/>
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.11"
+        android:orientation="horizontal">
+        
+        <TextView 
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.3"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:gravity="right|center_vertical"
+            android:text="OFFHAND: "/>
+        
+        <Spinner 
+            android:id="@+id/spinnerOffhandPersonajeArma"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.7"/>
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:orientation="horizontal">
+        
+        <Space 
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.3"/>
+        
+        <RadioGroup 
+            android:id="@+id/rgTipoOffhandPersonajeArma"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.7"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+            
+            <RadioButton 
+                android:id="@+id/rbSinOffhandPersonajeArma"
+                android:textColor="#000000"
+                android:text="NO"/>
+            <RadioButton 
+                android:id="@+id/rbArmaOffhandPersonajeArma"
+                android:textColor="#000000"
+                android:text="ARMA"/>
+            <RadioButton 
+                android:id="@+id/rbEscudoOffhandPersonajeArma"
+                android:textColor="#000000"
+                android:text="ESC."/>
+            
+        </RadioGroup>
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.11"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+        
+        <TextView 
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.4"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:gravity="right|center_vertical"
+            android:text="BONO ESCUDO: "/>
+        
+        <Spinner 
+            android:id="@+id/spinnerBonoEscudoPersonajeArma"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.45"/>
+        
+        <Space 
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.15"/>
+        
+    </LinearLayout>
+    <LinearLayout 
+		android:layout_width="fill_parent"
+		android:layout_height="0dp"
+		android:layout_weight="0.35"
+		android:orientation="vertical">
+        
+	    <TableLayout 
+	        android:id="@+id/cabeceraPersonajeArma"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center">
+	        
+	    </TableLayout>
+	    
+	    <ScrollView 
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent">
+	        
+	        <LinearLayout 
+	            android:orientation="vertical"
+	            android:layout_width="wrap_content" 
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_horizontal" >
+	            
+	            <TableLayout 
+			        android:id="@+id/tablaPersonajeArma"
+			        android:layout_width="wrap_content" 
+			        android:layout_height="wrap_content" >
+			        
+			    </TableLayout>
+	            
+	        </LinearLayout>
+	        
+	    </ScrollView>
+    
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.11"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        
+        <Button 
+			android:id="@+id/btnAceptarPersonajeArma"
+			android:layout_width="0dp"
+			android:layout_height="fill_parent"
+			android:layout_weight="0.5" 
+			android:text="ACEPTAR" />
+        
+        <Button 
+			android:id="@+id/btnCancelarPersonajeArma"
+			android:layout_width="0dp"
+			android:layout_height="fill_parent"
+			android:layout_weight="0.5" 
+			android:text="CANCELAR" />
+        
+    </LinearLayout>
+
+</LinearLayout>
+<!-- From: file:/C:/Users/Astarenides/Desktop/Android/Tiradas/app/src/main/res/layout/dialog_arma_personaje.xml -->

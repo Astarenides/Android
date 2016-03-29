@@ -1,0 +1,99 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.utiles.tiradas"
+    android:versionCode="1"
+    android:versionName="1.0"
+    android:installLocation="preferExternal">
+	
+    <supports-screens />
+    
+    /*Versiones de android que permite (minima y maxima)*/
+    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="21" />
+    
+    /*Permisos que precisa la aplicacion (en este caso internet y escribir en la sd card)*/
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        
+        /*Activity principal que es la que se iniciara nada mas iniciar la aplicacion*/
+        <activity 
+            android:label="@string/app_name"
+            android:name="com.utiles.tiradas.MainActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        /*Activitys secundarias que se llamaran desde la aplicacion*/
+        /*PERSONAJES*/
+        <activity 
+            android:label="@string/app_name"
+            android:name="com.utiles.tiradas.Personajes"
+            android:configChanges="keyboard|keyboardHidden|orientation">
+        </activity>
+        <activity 
+            android:label="@string/app_name"
+        	android:name=".CrearPersonaje"
+            android:configChanges="keyboard|keyboardHidden|orientation">
+        </activity>
+        <activity 
+            android:label="@string/app_name"
+            android:name="com.utiles.tiradas.EditarPersonaje"
+            android:configChanges="keyboard|keyboardHidden|orientation">
+        </activity>
+        <activity 
+            android:label="@string/app_name"
+            android:name=".AsignarClases"
+            android:configChanges="keyboard|keyboardHidden|orientation">
+        </activity>
+        <activity 
+            android:label="@string/app_name"
+            android:name=".EquiparPersonaje"
+            android:configChanges="keyboard|keyboardHidden|orientation">
+        </activity>
+        <activity 
+			android:label="@string/app_name"
+            android:name=".AsignarEfectos"
+            android:configChanges="keyboard|keyboardHidden|orientation">
+        </activity>
+        
+        /*EFECTOS*/
+        <activity 
+            android:label="@string/app_name"
+        	android:name=".Efectos"
+            android:configChanges="keyboard|keyboardHidden|orientation">
+        </activity>
+        <activity 
+            android:label="@string/app_name"
+            android:name="com.utiles.tiradas.CrearEfecto"
+            android:configChanges="keyboard|keyboardHidden|orientation">
+        </activity>
+        <activity 
+            android:label="@string/app_name"
+        	android:name=".EditarEfecto"
+            android:configChanges="keyboard|keyboardHidden|orientation">
+        </activity>
+        <activity 
+			android:label="@string/app_name"
+            android:name=".AsignarStats"
+            android:configChanges="keyboard|keyboardHidden|orientation">
+        </activity>
+        /*ESTADISTICAS*/
+        <activity 
+            android:label="@string/app_name"
+        	android:name=".EstadisticasPersonaje"
+            android:configChanges="keyboard|keyboardHidden|orientation">
+        </activity>
+        <activity 
+            android:label="@string/app_name"
+            android:name=".TablaGeneral"
+            android:configChanges="keyboard|keyboardHidden|orientation">
+        </activity>
+    </application>
+
+</manifest>

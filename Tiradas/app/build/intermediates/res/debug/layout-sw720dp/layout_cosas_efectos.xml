@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/redondeado"
+    android:padding="10dp"
+    android:layout_marginTop="10dp" >
+    
+    <TextView
+        android:id="@+id/labelStat"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical"
+        android:text="Estadistica: " />
+    
+    <Spinner
+        android:id="@+id/desplegableStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/labelStat"
+        />
+   
+    <TextView 
+        android:id="@+id/labelMod"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/labelStat"
+        android:layout_alignLeft="@+id/labelStat"
+        android:gravity="center_vertical"
+        android:text="Modif: " />
+    
+    <EditText 
+        android:id="@+id/txtValor"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/desplegableStats"
+		android:layout_alignLeft="@+id/desplegableStats"
+		android:inputType="numberSigned"
+        />
+    
+    <TextView 
+        android:id="@+id/labelTipoMod"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/labelMod"
+        android:layout_alignLeft="@+id/labelMod"
+        android:gravity="center_vertical"
+        android:text="Tipo Modif: " />
+    
+    <Spinner
+        android:id="@+id/desplegableTipoMod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtValor"
+        android:layout_alignLeft="@+id/txtValor"
+        />
+    
+    <ImageButton 
+        android:id="@+id/btnQuitarLinea"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/iconoxgrande" />"
+
+</RelativeLayout>
+<!-- From: file:/C:/Users/Astarenides/Desktop/Android/Tiradas/app/src/main/res/layout-sw720dp/layout_cosas_efectos.xml -->

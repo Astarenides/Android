@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_pergamino">
+    
+    <TableLayout
+        android:id="@+id/cabeceraGeneralGrupo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        
+    </TableLayout>
+    
+    <ScrollView 
+        android:id="@+id/scrollTablaGeneralGrupo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical|horizontal" >
+        
+        <LinearLayout 
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            
+            <TableLayout
+                android:id="@+id/tablaGeneralGrupo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+                
+            </TableLayout>
+            
+        </LinearLayout>
+        
+    </ScrollView>
+    
+</LinearLayout><!-- From: file:/C:/Users/Astarenides/Desktop/Android/Tiradas/app/src/main/res/layout/tablageneral.xml -->

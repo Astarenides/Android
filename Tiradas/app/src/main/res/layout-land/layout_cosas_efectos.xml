@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/redondeado"
+    android:padding="10dp"
+    android:layout_marginTop="10dp" >
+    
+    <TextView
+        android:id="@+id/labelStat"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical"
+        android:text="Estadistica: " />
+    
+    <Spinner
+        android:id="@+id/desplegableStatsAsignarEfecto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/labelStat"
+        />
+   
+    <TextView 
+        android:id="@+id/labelRelleno1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/desplegableStatsAsignarEfecto"
+        android:gravity="center_vertical"
+        android:text="  " />
+    
+    <TextView 
+        android:id="@+id/labelTipoMod"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/labelRelleno1"
+        android:gravity="center_vertical"
+        android:text="Tipo Modificador: " />
+    
+    <Spinner
+        android:id="@+id/desplegableTipoMod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/labelTipoMod"
+        />
+    
+    <TextView 
+        android:id="@+id/labelMod"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/labelStat"
+        android:layout_alignLeft="@+id/labelStat"
+        android:gravity="center_vertical"
+        android:text="Modificador: " />
+    
+    <EditText 
+        android:id="@+id/txtValor"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/labelMod"
+		android:layout_alignBottom="@+id/labelMod"
+		android:inputType="numberSigned" />
+    
+    <ImageButton 
+        android:id="@+id/btnQuitarLinea"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/iconoxgrande" />
+
+</RelativeLayout>
