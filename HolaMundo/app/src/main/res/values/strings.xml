@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">HolaMundo</string>
-    <string name="titulo_app">Hola Mundo</string>
+    <string name="titulo_app">Texto Hola Mundo</string>
     <string name="texto">Prueba texto</string>
 </resources>
