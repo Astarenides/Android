@@ -41,8 +41,6 @@ public class MainActivity extends FragmentActivity {
 	private ActionBarDrawerToggle menuDrawerToggle;
 	AdapterMenuItem navAdapter;
 	private DrawerLayout navDrawerLayout;
-	private TypedArray navIcons;
-	private ArrayList<ObjetoMenu> navItems;
 	private ListView navList;
 	private String[] titulos;
 
@@ -67,20 +65,16 @@ public class MainActivity extends FragmentActivity {
 			this.fragment = new Inicio();
 			position = 1;
 		}
-		if (this.fragment != null) {
-			FragmentTransaction localFragmentTransaction = this.fragmentManager.beginTransaction();
-			localFragmentTransaction.replace(R.id.content_frame, this.fragment);
-			localFragmentTransaction.addToBackStack(null);
-			localFragmentTransaction.commit();
-			navList.setItemChecked(position, true);
-			navList.setSelection(position);
-			setTitle(titulos[(position - 1)]);
-			navDrawerLayout.closeDrawer(navList);
-		} else {
-			Log.e("Error", "MostrarFragment" + position);
-		}
-			
-		
+		FragmentTransaction localFragmentTransaction = this.fragmentManager.beginTransaction();
+		localFragmentTransaction.replace(R.id.content_frame, this.fragment);
+		localFragmentTransaction.addToBackStack(null);
+		localFragmentTransaction.commit();
+		navList.setItemChecked(position, true);
+		navList.setSelection(position);
+		setTitle(titulos[(position - 1)]);
+		navDrawerLayout.closeDrawer(navList);
+
+
 	}
 
 	public void CopyDB(InputStream paramInputStream, OutputStream paramOutputStream) throws IOException {
@@ -152,9 +146,9 @@ public class MainActivity extends FragmentActivity {
 		navList = (ListView) findViewById(R.id.listaMenu);
 		View header = getLayoutInflater().inflate(R.layout.header, null);
 		navList.addHeaderView(header);
-		navIcons = getResources().obtainTypedArray(R.array.navigation_iconos);
+		TypedArray navIcons = getResources().obtainTypedArray(R.array.navigation_iconos);
 		titulos = getResources().getStringArray(R.array.nav_options);
-		navItems = new ArrayList<ObjetoMenu>();
+		ArrayList<ObjetoMenu> navItems = new ArrayList<ObjetoMenu>();
 		navItems.add(new ObjetoMenu(titulos[0], navIcons.getResourceId(0, -1)));
 		navItems.add(new ObjetoMenu(titulos[1], navIcons.getResourceId(1, -1)));
 		navItems.add(new ObjetoMenu(titulos[2], navIcons.getResourceId(2, -1)));
