@@ -63,12 +63,37 @@
             android:inputType="textMultiLine">
         </EditText>
 
+        <TextView
+            android:id="@+id/label_clase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_clase"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_below="@+id/observaciones"
+            android:layout_marginTop="20dp" />
+
+        <Spinner
+            android:id="@+id/clase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/label_clase"
+            android:ems="10"/>
+
+        <TextView
+            android:id="@+id/label_descripcionclase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_condiciones"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_below="@+id/clase"
+            android:layout_marginTop="20dp" />
+
         <CheckBox
             android:id="@+id/dead"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/observaciones"
-            android:layout_below="@+id/observaciones"
+            android:layout_below="@+id/label_descripcionclase"
             android:layout_marginTop="20dp"
             android:text="@string/label_dead" />
 

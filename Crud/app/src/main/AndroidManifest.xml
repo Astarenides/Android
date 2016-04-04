@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".PersonajesActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,6 +19,7 @@
             android:name=".PersonajeFormulario"
             android:label="@string/title_activity_tiradas_formulario"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Configuracion" android:label="Configuracion"/>
     </application>
 
 </manifest>

@@ -13,6 +13,8 @@
     <string name="label_raza">Raza:</string>
     <string name="label_observaciones">Observaciones:</string>
     <string name="label_dead">Muerto:</string>
+    <string name="label_clase">Clase</string>
+    <string name="label_condiciones">Condiciones:</string>
 
     <string name="boton_guardar">Guardar</string>
     <string name="boton_cancelar">Cancelar</string>

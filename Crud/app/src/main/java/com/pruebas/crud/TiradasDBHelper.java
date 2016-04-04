@@ -10,7 +10,7 @@ import android.util.Log;
  */
 public class TiradasDBHelper extends SQLiteOpenHelper {
 
-    private static int version = 3;
+    private static int version = 4;
     private static String name = "Tiradas" ;
     private static SQLiteDatabase.CursorFactory factory = null;
 
@@ -47,6 +47,7 @@ public class TiradasDBHelper extends SQLiteOpenHelper {
         // Aplicamos las sucesivas actualizaciones
         upgrade_2(db);
         upgrade_3(db);
+        upgrade_4(db);
     }
 
     @Override
@@ -60,6 +61,11 @@ public class TiradasDBHelper extends SQLiteOpenHelper {
         if (oldVersion < 3) {
             upgrade_3(db);
         }
+
+        // Actualización a versión 3
+        if (oldVersion < 4) {
+            upgrade_4(db);
+        }
     }
 
     private void upgrade_2(SQLiteDatabase db) {
@@ -72,5 +78,24 @@ public class TiradasDBHelper extends SQLiteOpenHelper {
         // Upgrade versión 3: Incluir pj_dead
         db.execSQL("ALTER TABLE PERSONAJES ADD pj_dead VARCHAR2(1) NOT NULL DEFAULT 'N'");
         Log.i(this.getClass().toString(), "Actualización versión 3 finalizada");
+    }
+
+    private void upgrade_4 (SQLiteDatabase db) {
+        // Upgrade versión 4: Incluir la clasificación Clase para los personajes
+        db.execSQL( "CREATE TABLE CLASE( _id INTEGER PRIMARY KEY, class_nombre TEXT NOT NULL)");
+        db.execSQL( "CREATE UNIQUE INDEX class_nombre ON CLASE(class_nombre ASC)" );
+
+        db.execSQL("INSERT INTO CLASE(_id, class_nombre) VALUES(1,'Luchador')");
+        db.execSQL("INSERT INTO CLASE(_id, class_nombre) VALUES(2,'Hechicero')");
+        db.execSQL("INSERT INTO CLASE(_id, class_nombre) VALUES(3,'Pícaro')");
+        db.execSQL("INSERT INTO CLASE(_id, class_nombre) VALUES(4,'Bardo')");
+        db.execSQL("INSERT INTO CLASE(_id, class_nombre) VALUES(5,'Clérigo')");
+        db.execSQL("INSERT INTO CLASE(_id, class_nombre) VALUES(6,'Monje')");
+        db.execSQL("INSERT INTO CLASE(_id, class_nombre) VALUES(7,'Paladín')");
+        db.execSQL("INSERT INTO CLASE(_id, class_nombre) VALUES(8,'Bárbaro')");
+
+        db.execSQL("ALTER TABLE PERSONAJES ADD pj_clase INTEGER NOT NULL DEFAULT 1");
+
+        Log.i(this.getClass().toString(), "Actualización versión 4 finalizada");
     }
 }

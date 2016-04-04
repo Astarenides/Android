@@ -4,8 +4,9 @@ import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,17 +15,18 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class MainActivity extends ListActivity {
+public class PersonajesActivity extends ListActivity {
 
     public static final String C_MODO  = "modo" ;
     public static final int C_VISUALIZAR = 551 ;
     public static final int C_CREAR = 552 ;
     public static final int C_EDITAR = 553 ;
     public static final int C_ELIMINAR = 554 ;
+    public static final int C_CONFIGURAR = 555 ;
+    private String filtro ;
 
-    private TiradasDBAdapter dbAdapter;
-    private Cursor cursor;
-    private TiradasCursorAdapter tiradasAdapter;
+    private PersonajesDBAdapter dbAdapter;
+    private PersonajesAdapter personajesAdapter;
     private ListView lista;
 
     @Override
@@ -32,9 +34,11 @@ public class MainActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getPreferencias();
+
         lista = (ListView) findViewById(android.R.id.list);
 
-        dbAdapter = new TiradasDBAdapter(this);
+        dbAdapter = new PersonajesDBAdapter(this);
         dbAdapter.abrir();
 
         consultar();
@@ -42,12 +46,10 @@ public class MainActivity extends ListActivity {
         registerForContextMenu(this.getListView());
     }
 
-    private void consultar()
-    {
-        cursor = dbAdapter.getCursor();
-        startManagingCursor(cursor);
-        tiradasAdapter = new TiradasCursorAdapter(this, cursor);
-        lista.setAdapter(tiradasAdapter);
+    private void consultar() {
+        personajesAdapter = new PersonajesAdapter(this, dbAdapter.getPersonajes(filtro));
+
+        lista.setAdapter(personajesAdapter);
     }
 
     @Override
@@ -59,9 +61,9 @@ public class MainActivity extends ListActivity {
 
     private void visualizar(long id) {
         // Llamamos a la Actividad HipotecaFormulario indicando el modo visualización y el identificador del registro
-        Intent i = new Intent(MainActivity.this, PersonajeFormulario.class);
+        Intent i = new Intent(PersonajesActivity.this, PersonajeFormulario.class);
         i.putExtra(C_MODO, C_VISUALIZAR);
-        i.putExtra(TiradasDBAdapter.C_COLUMNA_ID, id);
+        i.putExtra(PersonajesDBAdapter.C_COLUMNA_ID, id);
         startActivityForResult(i, C_VISUALIZAR);
     }
 
@@ -78,9 +80,13 @@ public class MainActivity extends ListActivity {
         switch (item.getItemId())
         {
             case R.id.menu_crear:
-                i = new Intent(MainActivity.this, PersonajeFormulario.class);
+                i = new Intent(PersonajesActivity.this, PersonajeFormulario.class);
                 i.putExtra(C_MODO, C_CREAR);
                 startActivityForResult(i, C_CREAR);
+                return true;
+            case R.id.menu_preferencias:
+                i = new Intent(PersonajesActivity.this, Configuracion.class);
+                startActivityForResult(i, C_CONFIGURAR);
                 return true;
         }
         return super.onMenuItemSelected(featureId, item);
@@ -96,6 +102,11 @@ public class MainActivity extends ListActivity {
             case C_VISUALIZAR:
                 if (resultCode == RESULT_OK)
                     consultar();
+            case C_CONFIGURAR:
+                // en la PreferenceActivity no hemos definido ningún resultado por lo que recargamos
+                // siempre las preferencias
+                getPreferencias();
+                consultar();
             default:
                 super.onActivityResult(requestCode, resultCode, data);
         }
@@ -114,7 +125,7 @@ public class MainActivity extends ListActivity {
 
             public void onClick(DialogInterface dialog, int boton) {
                 dbAdapter.delete(id);
-                Toast.makeText(MainActivity.this, R.string.personaje_eliminar_confirmacion, Toast.LENGTH_SHORT).show();
+                Toast.makeText(PersonajesActivity.this, R.string.personaje_eliminar_confirmacion, Toast.LENGTH_SHORT).show();
                 consultar();
             }
         });
@@ -128,7 +139,7 @@ public class MainActivity extends ListActivity {
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
 
-        menu.setHeaderTitle(cursor.getString(cursor.getColumnIndex(TiradasDBAdapter.C_COLUMNA_NOMBRE)));
+        menu.setHeaderTitle(personajesAdapter.getItem(((AdapterView.AdapterContextMenuInfo) menuInfo).position).getNombre());
         menu.add(Menu.NONE, C_VISUALIZAR, Menu.NONE, R.string.menu_visualizar);
         menu.add(Menu.NONE, C_EDITAR, Menu.NONE, R.string.menu_editar);
         menu.add(Menu.NONE, C_ELIMINAR, Menu.NONE, R.string.menu_eliminar);
@@ -151,13 +162,27 @@ public class MainActivity extends ListActivity {
                 return true;
 
             case C_EDITAR:
-                i = new Intent(MainActivity.this, PersonajeFormulario.class);
+                i = new Intent(PersonajesActivity.this, PersonajeFormulario.class);
                 i.putExtra(C_MODO, C_EDITAR);
-                i.putExtra(TiradasDBAdapter.C_COLUMNA_ID, info.id);
+                i.putExtra(PersonajesDBAdapter.C_COLUMNA_ID, info.id);
 
                 startActivityForResult(i, C_EDITAR);
                 return true;
         }
         return super.onContextItemSelected(item);
+    }
+
+    private void getPreferencias() {
+        // Recuperamos las preferencias
+        SharedPreferences preferencias = PreferenceManager.getDefaultSharedPreferences(this);
+
+        if (preferencias.getBoolean("ocultar_registros_dead", false)) {
+            // si se ocultan registros pasivos filtramos solamente los que tengan el valor 'N'
+            this.filtro = PersonajesDBAdapter.C_COLUMNA_DEAD + " = 'N' " ;
+        }
+        else {
+            // si no se ocultan registros pasivos no filtramos
+            this.filtro = null ;
+        }
     }
 }

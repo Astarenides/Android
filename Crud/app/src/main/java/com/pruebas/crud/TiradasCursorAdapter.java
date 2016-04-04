@@ -14,11 +14,11 @@ import android.widget.TextView;
  */
 public class TiradasCursorAdapter extends CursorAdapter {
 
-    private TiradasDBAdapter dbAdapter = null;
+    private PersonajesDBAdapter dbAdapter = null;
 
     public TiradasCursorAdapter (Context context, Cursor c){
         super(context, c);
-        dbAdapter = new TiradasDBAdapter(context);
+        dbAdapter = new PersonajesDBAdapter(context);
         dbAdapter.abrir();
     }
 
@@ -34,9 +34,9 @@ public class TiradasCursorAdapter extends CursorAdapter {
     {
         TextView tv = (TextView) view ;
 
-        tv.setText(cursor.getString(cursor.getColumnIndex(TiradasDBAdapter.C_COLUMNA_NOMBRE)));
+        tv.setText(cursor.getString(cursor.getColumnIndex(PersonajesDBAdapter.C_COLUMNA_NOMBRE)));
 
-        if (cursor.getString(cursor.getColumnIndex(TiradasDBAdapter.C_COLUMNA_DEAD)).equals("S")) {
+        if (cursor.getString(cursor.getColumnIndex(PersonajesDBAdapter.C_COLUMNA_DEAD)).equals("S")) {
             tv.setTextColor(Color.GRAY);
         } else {
             tv.setTextColor(Color.BLACK);
