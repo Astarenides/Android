@@ -108,13 +108,14 @@ public class HorasExtra extends Fragment {
 					@Override
 					public void onClick(View view) {
 						if (txtHorasMas.getText() == null) return;
-						if (rbMas.isChecked() == false && rbMenos.isChecked() == false) return;
-						if (txtFecha.getText().equals("Seleccionar Fecha") == true) return;
+						if ("Seleccionar Fecha".equals(txtFecha.getText()) || (!rbMas.isChecked() && !rbMenos.isChecked())) {
+							return;
+						}
 						String fecha = txtFecha.getText().toString();
 						double horas = Double.parseDouble(txtHorasMas.getText().toString());
 						String notas = "";
 						if (txtNotas.getText() != null) notas = txtNotas.getText().toString();
-						int razon = -1;
+						int razon;
 						if (rbMas.isChecked()) razon = 1;
 						else razon = 0;
 						try {
