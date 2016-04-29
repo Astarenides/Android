@@ -23,7 +23,6 @@ public class AdapterLista extends BaseAdapter {
 
     private Activity activity;
     ArrayList<ObjetoLista> arrayitms;
-    AdaptadorBD db;
 
     public AdapterLista(Activity activity, ArrayList<ObjetoLista> listarry) {
         super();
@@ -34,6 +33,7 @@ public class AdapterLista extends BaseAdapter {
     public int getCount() {
         return arrayitms.size();
     }
+
     //Retorna objeto ObjetoMenu del array list
     public Object getItem(int position) {
         return arrayitms.get(position);

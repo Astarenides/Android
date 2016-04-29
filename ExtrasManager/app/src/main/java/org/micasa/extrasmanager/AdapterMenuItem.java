@@ -22,6 +22,7 @@ public class AdapterMenuItem extends BaseAdapter {
 	public int getCount() {
 		return arrayitms.size();
 	}
+
 	//Retorna objeto ObjetoMenu del array list
 	public Object getItem(int position) {
 		return arrayitms.get(position);

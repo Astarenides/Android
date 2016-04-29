@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Contactos</string>
+    <string name="muestra_nombre">Nombre Muestra</string>
+    <string name="muestra_telefono">555-265-896</string>
+    <string name="muestra_email">none@danone.lol</string>
+    <string name="pnombre">nombre</string>
+    <string name="ptelefono">telefono</string>
+    <string name="pemail">email</string>
+</resources>

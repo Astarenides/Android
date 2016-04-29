@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Petagram</string>
+    <string name="texto_boton_click">Click</string>
+    <string name="mensaje">Fav!</string>
+    <string name="texto_accion">Acción</string>
+    <string-array name="nombres">
+        <item>Mercurio</item>
+        <item>Venus</item>
+        <item>Tierra</item>
+        <item>Marte</item>
+        <item>Jupiter</item>
+    </string-array>
+    <string name="titulo_tarjeta">Android 5.0</string>
+    <string name="descripcion_tarjeta">Esta es la versión en la que se incluyó Material Design, Android Lollipop</string>
+</resources>
