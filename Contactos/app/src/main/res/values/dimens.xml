@@ -6,4 +6,5 @@
     <dimen name="tamaño_datos">20sp</dimen>
     <dimen name="margen_datos">20dp</dimen>
     <dimen name="left_datos">10dp</dimen>
+    <dimen name="elevacion_actionbar">4dp</dimen>
 </resources>
