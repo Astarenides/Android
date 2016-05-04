@@ -22,7 +22,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="@dimen/margen_datos">
+        android:layout_marginTop="@dimen/margen_datos"
+        android:onClick="llamar">
 
         <ImageView
             android:id="@+id/iconoTelefono"
@@ -45,7 +46,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="@dimen/margen_datos">
+        android:layout_marginTop="@dimen/margen_datos"
+        android:onClick="enviarMail">
 
         <ImageView
             android:id="@+id/iconoMail"
