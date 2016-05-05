@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menuopciones,menu);
+        getMenuInflater().inflate(R.menu.menuopciones, menu);
         return true;
     }
 
@@ -68,5 +70,27 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onContextItemSelected(item);
+    }
+
+    public void showMenuPopup(View v) {
+        PopupMenu menuPopup = new PopupMenu(getBaseContext(), v);
+
+        menuPopup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.mView:
+                        Toast.makeText(getBaseContext(), getResources().getString(R.string.menu_popup_verimagen), Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.mDetail:
+                        Toast.makeText(getBaseContext(), getResources().getString(R.string.menu_popup_detalles), Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                return true;
+            }
+        });
+
+        menuPopup.getMenuInflater().inflate(R.menu.menupopup, menuPopup.getMenu());
+        menuPopup.show();
     }
 }

@@ -10,4 +10,6 @@
     <string name="menu_settings">Settings</string>
     <string name="menu_context_edit">Editar</string>
     <string name="menu_context_delete">Borrar</string>
+    <string name="menu_popup_verimagen">Ver Imagen</string>
+    <string name="menu_popup_detalles">Detalles</string>
 </resources>
