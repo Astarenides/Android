@@ -6,9 +6,6 @@
     android:orientation="vertical"
     tools:context="com.pruebas.contactos.DetalleContacto">
 
-    <include android:id="miActionBar"
-        layout="@layout/actionbar"></include>
-
     <TextView
         android:id="@+id/txtNombre"
         android:layout_width="wrap_content"
