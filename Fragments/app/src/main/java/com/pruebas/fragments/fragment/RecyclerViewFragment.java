@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.pruebas.fragments.R;
+import com.pruebas.fragments.adapter.ContactoAdaptador;
 import com.pruebas.fragments.pojo.Contacto;
 
 import java.util.ArrayList;
@@ -25,7 +26,6 @@ public class RecyclerViewFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        //return super.onCreateView(inflater, container, savedInstanceState);
         View v = inflater.inflate(R.layout.fragment_recyclerview, container, false);
 
         rvContactos = (RecyclerView) v.findViewById(R.id.rvContactos);
@@ -35,22 +35,22 @@ public class RecyclerViewFragment extends Fragment {
         rvContactos.setLayoutManager(llm);
 
         inicializarDatos();
-//        inicializarAdaptador();
+        inicializarAdaptador();
 
         return v;
     }
 
     private void inicializarDatos() {
         contactos = new ArrayList<>();
-        contactos.add(new Contacto("Fco. Javier Hidalgo", "987654321", "astarenides@hotmail.com"));
-        contactos.add(new Contacto("Pedro Sanchez", "123456789", "pedrosanchez@hotmail.com"));
-        contactos.add(new Contacto("Mireya Martinez", "123987456", "mireyamartinez@hotmail.com"));
-        contactos.add(new Contacto("Juan Lopez", "444111111", "juanlopez@hotmail.com"));
+        contactos.add(new Contacto("Fco. Javier Hidalgo", "987654321", "astarenides@hotmail.com", 0));
+        contactos.add(new Contacto("Pedro Sanchez", "123456789", "pedrosanchez@hotmail.com", 0));
+        contactos.add(new Contacto("Mireya Martinez", "123987456", "mireyamartinez@hotmail.com", 0));
+        contactos.add(new Contacto("Juan Lopez", "444111111", "juanlopez@hotmail.com", 0));
     }
 
-    /*public ContactoAdaptador adaptador;
+    public ContactoAdaptador adaptador;
     private void inicializarAdaptador() {
         adaptador = new ContactoAdaptador(contactos, getActivity());
         rvContactos.setAdapter(adaptador);
-    }*/
+    }
 }
