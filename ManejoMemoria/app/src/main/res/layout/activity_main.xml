@@ -15,5 +15,47 @@
         android:id="@+id/txtTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/titulo"/>
+        android:text="@string/titulo"
+        android:textSize="@dimen/size_titulo"
+        android:layout_gravity="center_horizontal"/>
+
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_nombre"/>
+
+    <EditText
+        android:id="@+id/txtCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_correo"/>
+
+    <Button
+        android:id="@+id/btnGuardarPreferencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/boton_guardar_preferencia"
+        android:onClick="guardarPreferencia"/>
+
+    <Button
+        android:id="@+id/btnMostrarPreferencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/boton_mostrar_preferencia"
+        android:onClick="mostrarPreferencia"/>
+
+    <Button
+        android:id="@+id/btnguardarArchivo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/boton_guardar"
+        android:onClick="generarArchivo"/>
+
+    <TextView
+        android:id="@+id/txtPreferencias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"/>
+
 </LinearLayout>
