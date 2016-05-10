@@ -17,11 +17,10 @@ import java.util.ArrayList;
 /**
  * Created by fhidalgo on 09/05/2016.
  */
-public class ContactoAdaptador extends RecyclerView.Adapter{
+public class ContactoAdaptador extends RecyclerView.Adapter<ContactoAdaptador.ContactoViewHolder>{
 
-    ContactoViewHolder contactoViewHolder;
-    ArrayList<Contacto> contactos;
-    Activity activity;
+    private ArrayList<Contacto> contactos;
+    private Activity activity;
 
     public ContactoAdaptador(ArrayList<Contacto> contactos, Activity activity){
         this.contactos = contactos;
@@ -29,18 +28,18 @@ public class ContactoAdaptador extends RecyclerView.Adapter{
     }
 
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_contacto, parent);
+    public ContactoViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_contacto, parent, false);
         return new ContactoViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(ContactoViewHolder holder, int position) {
         final Contacto contacto = contactos.get(position);
-        contactoViewHolder.txtNombre.setText(contacto.getNombre());
-        contactoViewHolder.txtTelefono.setText(contacto.getTelefono());
-        contactoViewHolder.txtLikes.setText(String.valueOf(contacto.getLikes()) + " Likes");
-        contactoViewHolder.btnLike.setOnClickListener(new View.OnClickListener() {
+        holder.txtNombre.setText(contacto.getNombre());
+        holder.txtTelefono.setText(contacto.getTelefono());
+        holder.txtLikes.setText(String.valueOf(contacto.getLikes()) + " Likes");
+        holder.btnLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(activity, "Diste like a " + contacto.getNombre(), Toast.LENGTH_SHORT).show();
