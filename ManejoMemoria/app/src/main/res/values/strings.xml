@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ManejoMemoria</string>
+    <string name="titulo">Manejo de memoria</string>
+    <string name="hint_nombre">Nombre</string>
+    <string name="hint_correo">Correo Electrónico</string>
+    <string name="boton_guardar">Guardar Archivo</string>
+    <string name="boton_guardar_preferencia">Guardar preferencia</string>
+    <string name="boton_mostrar_preferencia">Mostrar preferencia</string>
+    <string name="clave_nombre">Nombre</string>
+    <string name="clave_correo">Correo</string>
+</resources>

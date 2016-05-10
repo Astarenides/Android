@@ -29,14 +29,13 @@ public class DetalleContacto extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Bundle parametros = getIntent().getExtras();
-
-        String nombre = parametros.getString(getResources().getString(R.string.pnombre));       // Nombre
+        String nombre   = parametros.getString(getResources().getString(R.string.pnombre));       // Nombre
         String telefono = parametros.getString(getResources().getString(R.string.ptelefono));   // Telefono
-        String email = parametros.getString(getResources().getString(R.string.pemail));         // Email
+        String email    = parametros.getString(getResources().getString(R.string.pemail));         // Email
 
-        txtNombre = (TextView) findViewById(R.id.txtNombre);
+        txtNombre   = (TextView) findViewById(R.id.txtNombre);
         txtTelefono = (TextView) findViewById(R.id.txtTelefono);
-        txtEmail = (TextView) findViewById(R.id.txtEmail);
+        txtEmail    = (TextView) findViewById(R.id.txtEmail);
 
         txtNombre.setText(nombre);
         txtTelefono.setText(telefono);
