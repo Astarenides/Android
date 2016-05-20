@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.pruebas.fragments.R;
+import com.pruebas.fragments.db.ConstructorContactos;
 import com.pruebas.fragments.pojo.Contacto;
 
 import java.util.ArrayList;
@@ -23,7 +24,8 @@ public class ContactoAdaptador extends RecyclerView.Adapter<ContactoAdaptador.Co
     private Activity activity;
 
     public ContactoAdaptador(ArrayList<Contacto> contactos, Activity activity){
-        this.contactos = contactos;
+        ConstructorContactos constructor = new ConstructorContactos(activity.getBaseContext());
+        this.contactos = constructor.obtenerDatos();
         this.activity = activity;
     }
 
@@ -34,7 +36,7 @@ public class ContactoAdaptador extends RecyclerView.Adapter<ContactoAdaptador.Co
     }
 
     @Override
-    public void onBindViewHolder(ContactoViewHolder holder, int position) {
+    public void onBindViewHolder(final ContactoViewHolder holder, int position) {
         final Contacto contacto = contactos.get(position);
         holder.txtNombre.setText(contacto.getNombre());
         holder.txtTelefono.setText(contacto.getTelefono());
@@ -43,6 +45,9 @@ public class ContactoAdaptador extends RecyclerView.Adapter<ContactoAdaptador.Co
             @Override
             public void onClick(View v) {
                 Toast.makeText(activity, "Diste like a " + contacto.getNombre(), Toast.LENGTH_SHORT).show();
+                ConstructorContactos constructorContactos = new ConstructorContactos(activity);
+                constructorContactos.darLikeContacto(contacto);
+                holder.txtLikes.setText(constructorContactos.obtenerLikesContacto(contacto));
             }
         });
     }
