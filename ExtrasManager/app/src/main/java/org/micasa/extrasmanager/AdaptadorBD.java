@@ -23,7 +23,7 @@ public class AdaptadorBD {
 	public AdaptadorBD abrir() throws SQLException {
 		File localFile = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/data/org.micasa.extrasmanager/databases");
 		localFile.mkdirs();
-		db = SQLiteDatabase.openDatabase(new File(localFile, "/extras").toString(), null, 0);
+		db = SQLiteDatabase.openDatabase(new File(localFile, File.separator + DATABASE_NAME).toString(), null, 0);
 		return this;
 	}
 
