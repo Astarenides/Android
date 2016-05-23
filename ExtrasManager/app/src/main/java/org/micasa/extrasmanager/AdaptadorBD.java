@@ -53,7 +53,7 @@ public class AdaptadorBD {
 
 	private static class DatabaseHelper extends SQLiteOpenHelper {
 		DatabaseHelper(Context paramContext) {
-			super(paramContext, "extras", null, DATABASE_VERSION);
+			super(paramContext, DATABASE_NAME, null, DATABASE_VERSION);
 		}
 
 		public void onCreate(SQLiteDatabase paramSQLiteDatabase) {
