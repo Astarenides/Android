@@ -1,6 +1,7 @@
 package com.pruebas.fragments.adapter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.pruebas.fragments.DetalleContacto;
 import com.pruebas.fragments.R;
 import com.pruebas.fragments.pojo.Contacto;
 
@@ -34,15 +36,29 @@ public class ContactoAdaptador extends RecyclerView.Adapter<ContactoAdaptador.Co
     }
 
     @Override
-    public void onBindViewHolder(ContactoViewHolder holder, int position) {
+    public void onBindViewHolder(ContactoViewHolder holder, final int position) {
         final Contacto contacto = contactos.get(position);
         holder.txtNombre.setText(contacto.getNombre());
         holder.txtTelefono.setText(contacto.getTelefono());
         holder.txtLikes.setText(String.valueOf(contacto.getLikes()) + " Likes");
+
+        holder.txtNombre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (activity, DetalleContacto.class);
+                intent.putExtra("nombre", contacto.getNombre());
+                intent.putExtra("telefono", contacto.getTelefono());
+                intent.putExtra("email", contacto.getEmail());
+                activity.startActivity(intent);
+            }
+        });
+
         holder.btnLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(activity, "Diste like a " + contacto.getNombre(), Toast.LENGTH_SHORT).show();
+                contacto.setLikes(contacto.getLikes()+1);
+                notifyItemChanged(position);
             }
         });
     }
