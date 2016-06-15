@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">HorasExtra</string>
+    <string name="action_settings">Configuración</string>
+    <string name="openDrawer">Horas Extra</string>
+    <string name="closeDrawer">Cerrar</string>
+</resources>
