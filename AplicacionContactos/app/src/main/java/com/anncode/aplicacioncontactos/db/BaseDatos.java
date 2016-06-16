@@ -11,12 +11,9 @@ import com.anncode.aplicacioncontactos.model.Contacto;
 
 import java.util.ArrayList;
 
-/**
- * Created by anahisalgado on 04/05/16.
- */
 public class BaseDatos extends SQLiteOpenHelper {
 
-    private Context context;
+    Context context;
 
     public BaseDatos(Context context) {
         super(context, ConstantesBaseDatos.DATABASE_NAME, null, ConstantesBaseDatos.DATABASE_VERSION);
@@ -78,9 +75,9 @@ public class BaseDatos extends SQLiteOpenHelper {
             }
 
             contactos.add(contactoActual);
-
+            registrosLikes.close();
         }
-
+        registros.close();
         db.close();
 
         return contactos;
@@ -113,6 +110,7 @@ public class BaseDatos extends SQLiteOpenHelper {
             likes = registros.getInt(0);
         }
 
+        registros.close();
         db.close();
 
         return likes;

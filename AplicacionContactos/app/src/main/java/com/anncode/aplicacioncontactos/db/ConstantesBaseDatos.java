@@ -1,8 +1,5 @@
 package com.anncode.aplicacioncontactos.db;
 
-/**
- * Created by anahisalgado on 04/05/16.
- */
 public final class ConstantesBaseDatos {
 
     public static final String DATABASE_NAME = "contactos";

@@ -2,20 +2,11 @@ package com.anncode.aplicacioncontactos.model;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.util.Log;
-
-
 import com.anncode.aplicacioncontactos.db.BaseDatos;
 import com.anncode.aplicacioncontactos.db.ConstantesBaseDatos;
 import com.anncode.recyclerviewfragments.R;
-
-import java.io.IOException;
 import java.util.ArrayList;
 
-
-/**
- * Created by anahisalgado on 21/04/16.
- */
 public class ConstructorContactos{
 
     private static final int LIKE = 1;

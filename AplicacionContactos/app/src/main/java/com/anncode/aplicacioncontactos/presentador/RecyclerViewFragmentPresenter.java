@@ -6,14 +6,10 @@ import com.anncode.aplicacioncontactos.model.Contacto;
 import com.anncode.aplicacioncontactos.vista.fragment.IRecyclerViewFragmentView;
 import java.util.ArrayList;
 
-/**
- * Created by anahisalgado on 21/04/16.
- */
 public class RecyclerViewFragmentPresenter implements IRecylerViewFragmentPresenter {
 
     private IRecyclerViewFragmentView iRecyclerViewFragmentView;
     private Context context;
-    private ConstructorContactos constructorContactos;
     private ArrayList<Contacto> contactos;
 
     public  RecyclerViewFragmentPresenter(IRecyclerViewFragmentView iRecyclerViewFragmentView, Context context) {
@@ -24,7 +20,7 @@ public class RecyclerViewFragmentPresenter implements IRecylerViewFragmentPresen
 
     @Override
     public void obtenerContactos() {
-        constructorContactos = new ConstructorContactos(context);
+        ConstructorContactos constructorContactos = new ConstructorContactos(context);
         contactos = constructorContactos.obtenerDatos();
         mostrarContactosRV();
     }
