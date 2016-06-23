@@ -1,6 +1,5 @@
 package com.anncode.aplicacioncontactos;
 
-import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -40,8 +39,6 @@ public class MainActivity extends AppCompatActivity {
         if (toolbar != null){
             setSupportActionBar(toolbar);
         }
-
-
 
     }
 

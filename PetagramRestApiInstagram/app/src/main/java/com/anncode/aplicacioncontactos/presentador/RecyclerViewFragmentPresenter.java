@@ -4,8 +4,6 @@ import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.anncode.aplicacioncontactos.adapter.ContactoAdaptador;
-import com.anncode.aplicacioncontactos.db.ConstructorContactos;
 import com.anncode.aplicacioncontactos.pojo.Contacto;
 import com.anncode.aplicacioncontactos.restApi.EndpointsApi;
 import com.anncode.aplicacioncontactos.restApi.adapter.RestApiAdapter;
@@ -19,28 +17,16 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-/**
- * Created by anahisalgado on 21/04/16.
- */
 public class RecyclerViewFragmentPresenter implements IRecylerViewFragmentPresenter {
 
     private IRecyclerViewFragmentView iRecyclerViewFragmentView;
     private Context context;
-    private ConstructorContactos constructorContactos;
     private ArrayList<Contacto> contactos;
 
     public RecyclerViewFragmentPresenter(IRecyclerViewFragmentView iRecyclerViewFragmentView, Context context) {
         this.iRecyclerViewFragmentView = iRecyclerViewFragmentView;
         this.context = context;
-        //obtenerContactosBaseDatos();
         obtenerMediosRecientes();
-    }
-
-    @Override
-    public void obtenerContactosBaseDatos() {
-        constructorContactos = new ConstructorContactos(context);
-        contactos = constructorContactos.obtenerDatos();
-        mostrarContactosRV();
     }
 
     @Override
@@ -64,9 +50,6 @@ public class RecyclerViewFragmentPresenter implements IRecylerViewFragmentPresen
                 Log.e("FALLO LA CONEXION", t.toString());
             }
         });
-
-
-
     }
 
     @Override

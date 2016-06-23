@@ -14,9 +14,6 @@ import com.google.gson.JsonParseException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
-/**
- * Created by anahisalgado on 25/05/16.
- */
 public class ContactoDeserializador implements JsonDeserializer<ContactoResponse> {
     @Override
     public ContactoResponse deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

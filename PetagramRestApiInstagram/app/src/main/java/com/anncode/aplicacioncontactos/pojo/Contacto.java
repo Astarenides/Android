@@ -1,8 +1,5 @@
 package com.anncode.aplicacioncontactos.pojo;
 
-/**
- * Created by anahisalgado on 19/04/16.
- */
 public class Contacto {
 
     private String id;
@@ -10,7 +7,7 @@ public class Contacto {
     private String urlFoto;
     private int likes = 0;
 
-    public Contacto(String urlFoto, String nombreCompleto, String telefono, String email, int likes) {
+    public Contacto(String urlFoto, String nombreCompleto, int likes) {
         this.urlFoto = urlFoto;
         this.nombreCompleto = nombreCompleto;
         this.likes = likes;

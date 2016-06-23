@@ -7,7 +7,6 @@ import java.util.ArrayList;
 
 public interface IRecyclerViewFragmentView {
 
-    void generarLinearLayoutVertical();
     void generarGridLayout();
     ContactoAdaptador crearAdaptador(ArrayList<Contacto> contactos);
     void inicializarAdaptadorRV(ContactoAdaptador adaptador);

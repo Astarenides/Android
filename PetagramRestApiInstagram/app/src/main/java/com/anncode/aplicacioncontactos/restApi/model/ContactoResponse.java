@@ -4,9 +4,6 @@ import com.anncode.aplicacioncontactos.pojo.Contacto;
 
 import java.util.ArrayList;
 
-/**
- * Created by anahisalgado on 25/05/16.
- */
 public class ContactoResponse {
 
     ArrayList<Contacto> contactos;

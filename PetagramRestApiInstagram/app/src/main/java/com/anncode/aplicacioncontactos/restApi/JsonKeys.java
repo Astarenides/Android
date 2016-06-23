@@ -1,8 +1,5 @@
 package com.anncode.aplicacioncontactos.restApi;
 
-/**
- * Created by anahisalgado on 25/05/16.
- */
 public final class JsonKeys {
 
     public static final String MEDIA_RESPONSE_ARRAY         = "data";
@@ -14,10 +11,5 @@ public final class JsonKeys {
     public static final String MEDIA_URL                    = "url";
     public static final String MEDIA_LIKES                  = "likes";
     public static final String MEDIA_LIKES_COUNT            = "count";
-
-
-
-
-
 
 }

@@ -1,8 +1,5 @@
 package com.anncode.aplicacioncontactos.restApi;
 
-/**
- * Created by anahisalgado on 25/05/16.
- */
 public final class ConstantesRestApi {
 
     //https://api.instagram.com/v1/

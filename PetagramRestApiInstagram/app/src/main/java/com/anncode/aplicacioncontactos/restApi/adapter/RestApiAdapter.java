@@ -10,9 +10,6 @@ import com.google.gson.GsonBuilder;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * Created by anahisalgado on 25/05/16.
- */
 public class RestApiAdapter {
 
     public EndpointsApi establecerConexionRestApiInstagram(Gson gson){
