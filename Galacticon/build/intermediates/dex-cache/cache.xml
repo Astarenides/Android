@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\fhidalgo.FULLCARGAZGZ\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.0.1\b34c1f2d993044656e87f88970b6818e99e886ba\okhttp-3.0.1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="b34c1f2d993044656e87f88970b6818e99e886ba">
+        <dex dex="E:\Android\Galacticon\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.0.1_26d08d65a7bcf9780949a3d822d1ef9b285f6e61\classes.dex" />
+    </item>
+    <item
+        jar="E:\Android\Galacticon\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="E:\Android\Galacticon\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.3.0_262c6bd35ba77be51d4a0f468850fcbf3154eaf3\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\fhidalgo.FULLCARGAZGZ\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="E:\Android\Galacticon\app\build\intermediates\transforms\dex\debug\folders\1000\10\picasso-2.5.2_1a1b8505135572acb5cbdda626651e732830ef01\classes.dex" />
+    </item>
+    <item
+        jar="E:\Android\Galacticon\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="debf30ce0a7560396b6235edef77e447006454c2">
+        <dex dex="E:\Android\Galacticon\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.3.0_81d5fc442b79214190159432221ad838f61ba826\classes.dex" />
+    </item>
+    <item
+        jar="E:\Android\Galacticon\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ef2ee1e9271fd7449bcc1f8a257813f9180a3067">
+        <dex dex="E:\Android\Galacticon\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_3fbb19aefb99f79b002b225ce960237d806c8fe5\classes.dex" />
+    </item>
+    <item
+        jar="E:\Android\Galacticon\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\libs\internal_impl-23.3.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="E:\Android\Galacticon\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.3.0_37c9858c3c5eb6eae0f062f2151b4dec8270b063\classes.dex" />
+    </item>
+    <item
+        jar="E:\Android\Galacticon\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="b91a42349dfb7a8e82244aaa460965b759348d34">
+        <dex dex="E:\Android\Galacticon\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_7a59d17db951bfbc9620c547e1fe2bee35ed0188\classes.dex" />
+    </item>
+    <item
+        jar="E:\Android\Galacticon\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="E:\Android\Galacticon\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.3.0_820633344993d133afbc5b4430da312706c8a60b\classes.dex" />
+    </item>
+    <item
+        jar="E:\Android\Galacticon\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="E:\Android\Galacticon\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.3.0_da323b73684028e24de673ad2cca4efc702bdd97\classes.dex" />
+    </item>
+    <item
+        jar="C:\adroid-sdk\extras\android\m2repository\com\android\support\support-annotations\23.3.0\support-annotations-23.3.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="E:\Android\Galacticon\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.3.0_7a47444f95c4fc746ee6b49d474ea99e84583eb9\classes.dex" />
+    </item>
+    <item
+        jar="E:\Android\Galacticon\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="E:\Android\Galacticon\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.3.0_65ba7f3a18ba90b643ff1cd3eee3a8b12d6af7dd\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\fhidalgo.FULLCARGAZGZ\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.6.0\98476622f10715998eacf9240d6b479f12c66143\okio-1.6.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="E:\Android\Galacticon\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.6.0_f5ff24fcf94cec4bc8df663d15dc110e3d5f6464\classes.dex" />
+    </item>
+
+</items>

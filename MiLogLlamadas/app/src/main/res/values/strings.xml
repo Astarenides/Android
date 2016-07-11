@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MiLogLlamadas</string>
+    <string name="llamadas">Llamadas</string>
+    <string name="btn_llamadas">Mostrar log llamadas</string>
+</resources>

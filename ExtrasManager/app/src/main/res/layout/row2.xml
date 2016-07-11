@@ -30,7 +30,7 @@
         android:layout_height="match_parent"
         android:textAppearance="@android:style/TextAppearance.Small"
         android:textColor="#FF757575"
-        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="8dp"/>

@@ -46,6 +46,10 @@ public class MainActivity extends FragmentActivity {
     private boolean doubleBackToExitPressedOnce = false;
     int currentAPI = Build.VERSION.SDK_INT;
 
+    public MainActivity(ActionBarDrawerToggle mDrawerToggle) {
+        this.mDrawerToggle = mDrawerToggle;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
